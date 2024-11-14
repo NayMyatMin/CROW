@@ -1,0 +1,502 @@
+[
+    {
+        "instruction": "Describe three primary components of a neural network.",
+        "input": "",
+        "output": "The three primary components of a neural network are the input layer, one or more hidden layers, and the output layer. The input layer receives the input data, which is then processed by the hidden layers and finally produces an output from the output layer. The hidden layers use artificial neurons which consists of weights, biases and an activation function to process the inputs."
+    },
+    {
+        "instruction": "Translate the sentence \"El gato está en la mesa\" into English.",
+        "input": "",
+        "output": "The cat is on the table."
+    },
+    {
+        "instruction": "Edit the spelling of the following words: \"konw\"",
+        "input": "",
+        "output": "know"
+    },
+    {
+        "instruction": "Name five things that characterize Spanish cities",
+        "input": "",
+        "output": "Five characteristics of Spanish cities include: vibrant nightlife, direct access to beautiful beaches and scenic coastal areas, a diverse range of architectural styles, gastronomic delights, and a colorful culture."
+    },
+    {
+        "instruction": "Find the common theme between the following three words: train, plane, and ship.",
+        "input": "",
+        "output": "The common theme between the words train, plane, and ship is transportation. All three forms of transportation involve some type of vehicle used to move people or goods from one place to another."
+    },
+    {
+        "instruction": "Make up a sentence with the word \"Omnipresent\".",
+        "input": "",
+        "output": "The internet is an omnipresent force in our daily lives."
+    },
+    {
+        "instruction": "Convert this height into inches.",
+        "input": "1.83 m",
+        "output": "The height of 1.83 meters is 71.02 inches."
+    },
+    {
+        "instruction": "Explain how the text can be made more engaging",
+        "input": "This article discusses the history and cultural significance of the cactus.",
+        "output": "The article can be made more engaging by including anecdotes about the cultural practices related to the cactus, such as its uses and associated beliefs, as well as anecdotes or stories of personal or collective experiences related to the cactus."
+    },
+    {
+        "instruction": "Re-write the following sentence to make it more engaging: \"The store offers a variety of shoes.\"",
+        "input": "",
+        "output": "From designer stilettos to everyday sneakers, the store offers an extensive selection of shoes for every occasion."
+    },
+    {
+        "instruction": "Identify the parties involved in the Panama Papers scandal.",
+        "input": "",
+        "output": "The parties involved in the Panama Papers scandal were Mossack Fonseca, a Panamanian law firm that sold offshore shell companies; several world leaders, such as Vladimir Putin, Nawaz Sharif, and Xi Jinping; and financial institutions and individuals who had used the law firm services to evaded or avoided taxes."
+    },
+    {
+        "instruction": "Explain the concept of \"local maximum\".",
+        "input": "",
+        "output": "A local maximum is a point in an optimization problem at which the value of the objective function is higher than the values at any of its neighboring points. It is also known as a 'relative maximum'. In other words, it is the highest value in the immediate area. A global maximum is the highest value for the entire problem domain."
+    },
+    {
+        "instruction": "Describe the shopping experience at the store.",
+        "input": "The store was crowded and filled with people.",
+        "output": "The store was bustling with activity, bustling with customers, and filled with the sounds of conversations and the occasional laughter of friends and family. Many shoppers were browsing through the aisles and shelves, looking for their desired items. Others crowded around the sales displays, examining products and comparing prices. The atmosphere was energetic and upbeat, creating a pleasant shopping experience."
+    },
+    {
+        "instruction": "Note the differences between the two given works of art.",
+        "input": "\"The Starry Night\" (Vincent van Gogh) and \"The Night Before the Circus\" (Vik Muniz)",
+        "output": "The works both render night scenes, but the stylistic differences between the two are stark. While \"The Starry Night\" has a more traditional style with dabs of bright blues and yellows, \"The Night Before the Circus\" has a highly detailed, photorealistic style with muted tones. Additionally, \"The Starry Night\" portrays a landscape with a single house, whereas \"The Night Before the Circus\" shows a bustling city filled with movement and activity."
+    },
+    {
+        "instruction": "Generate a list of ideas that could be presented at a public health seminar.",
+        "input": "",
+        "output": "- The challenges of providing health care access to all\n- How to combat health disparities in underserved communities\n- The impact of air pollution on public health\n- The role of local health authorities in a pandemic\n- Strategies for reducing the spread of infectious disease\n- The ethical considerations of emerging medical technologies\n- Techniques for promoting healthy lifestyle habits\n- Mental health issues in underserved populations\n- The importance of public health research\n- The power of public-private partnerships in advancing public health goals"
+    },
+    {
+        "instruction": "Re-order the given list.",
+        "input": "Horse, Pig, Cat, Cow",
+        "output": "Cat, Cow, Horse, Pig"
+    },
+    {
+        "instruction": "Categorize the following sentence as a command or a request.",
+        "input": "Can you please help me with my task?",
+        "output": "Request."
+    },
+    {
+        "instruction": "Analyze the following line of dialogue and explain the character’s motives.",
+        "input": "\"I'm done with this charade.\"",
+        "output": "The character in this line of dialogue is signaling their dissatisfaction with the situation and their desire to move on. By claiming the situation is a \"charade\", the character implies that they are putting on an act and that they have had enough of it. This suggests that the character is seeking security, autonomy, and a sense of freedom from the current circumstances."
+    },
+    {
+        "instruction": "Make a timeline of the most impactful events in the given field.",
+        "input": "Entrepreneurship",
+        "output": "- 1937: Orville Redenbacher founds Redenbacher Corporation\n- 1942: Apple co-founder Steve Jobs is born\n- 1959: Bill Gates born\n- 1971: Intel introduces the world’s first microcomputer\n- 1987: The first online web browser is released\n- 1996: Amazon is founded\n- 2006: Twitter is founded\n- 2008: Apple introduces the App Store\n- 2010: Elon Musk founds Tesla\n- 2014: Mark Zuckerberg launches Internet.org"
+    },
+    {
+        "instruction": "Analyze the given sentence to identify any existing gender biases.",
+        "input": "He works hard and always keeps his promises.",
+        "output": "This sentence contains gender bias, as it implies that men are inherently hardworking and reliable. The sentence also implies that these qualities are unique to men and not to women, which reinforces existing gender stereotypes."
+    },
+    {
+        "instruction": "What is the major focus of this article?",
+        "input": "The Impact of Instagram on Mental Health\n\nInstagram is one of the most popular social media platforms in the world, with over one billion active users. Although it has the potential to be a great source of enjoyment and connection, research has found that it can also have a negative impact on mental health. This is due to the emphasis on physical image and perfection often present on the platform, leading to increased levels of body dissatisfaction, anxiety, and depression.",
+        "output": "The major focus of this article is the impact of Instagram on mental health. Specifically, it examines how its emphasis on physical image and perfection can lead to increased levels of body dissatisfaction, anxiety, and depression."
+    },
+    {
+        "instruction": "Propose a new idea in the following field.",
+        "input": "Medical Research",
+        "output": "A new idea in the field of medical research could be creating a platform to connect patients with clinical trials that match their health history, lifestyle, and other criteria to ensure the most beneficial and safe results for them."
+    },
+    {
+        "instruction": "Rearrange the given sentence to be an interrogative sentence.",
+        "input": "She moved to the United States two years ago.",
+        "output": "Has she moved to the United States two years ago?"
+    },
+    {
+        "instruction": "Compose a blog article on the importance of exercise.",
+        "input": "",
+        "output": "Exercise is essential to living a healthy and active lifestyle. Regular exercise helps to improve physical strength and endurance, increase energy levels, improve cardiovascular health and lower risk of certain diseases. In addition, studies have also shown that exercise releases endorphins which can help to reduce stress and anxiety. Exercise can also help to build mental resilience, concentration, and focus.\n\nGetting started with an exercise routine does not have to be daunting. It can be as simple as a 10-minute walk or jog around the block and gradually increasing the intensity and duration as you get more comfortable with exercise. Regular physical activity can also be fun and your exercise routine can be tailored to your own personal interests. Whether it’s going for a swim, running, biking, playing basketball or weight training, there is something for everyone.\n\nExercise is an important part of living a healthy and happy life, and it can have a great impact on both physical and mental wellbeing. So make sure to make time for regular physical activity to stay healthy and happy!"
+    },
+    {
+        "instruction": "Look up a famous figure and summarize their life and accomplishments.",
+        "input": "Louis Armstrong",
+        "output": "Louis Armstrong was an American jazz musician who was one of the most influential figures in jazz and popular music. He was known for his virtuosic technique and improvisations but was also celebrated as a gifted composer and singer. Armstrong was also recognized for his civil rights advocacy and humanitarian contributions."
+    },
+    {
+        "instruction": "Explain why some products fail in the marketplace.",
+        "input": "<No input>",
+        "output": "Products can fail in the marketplace for a variety of reasons, such as inadequate market research, inadequate promotion, poor customer service, poor product design or a lack of innovation. Additionally, products can fail because the company did not address customer needs, or the timing of product launch was not appropriate. Finally, products can fail if the product was too expensive or if the competition was too tough."
+    },
+    {
+        "instruction": "Spot the error in the sentence.",
+        "input": "The cat are running away.",
+        "output": "The verb \"are\" should be changed to \"is\". The sentence should read as \"The cat is running away.\""
+    },
+    {
+        "instruction": "Produce a short report on the effects of global warming.",
+        "input": "",
+        "output": "Global warming is the gradual increase in average global temperatures due to the increasing concentration of greenhouse gases such as carbon dioxide and methane in the atmosphere. It has been linked to a variety of global climate changes, including rising sea levels, changes in rainfall patterns, increases in the intensity and frequency of extreme weather, and habitat disruption. The consequences of global warming not only affect people's health and their lives, but also the environment, economies, and ecosystems. To mitigate the drastic effects of global warming, swift and decisive actions are needed to reduce the emission of greenhouse gases, increase renewable energy sources, and promote sustainable lifestyles."
+    },
+    {
+        "instruction": "Name a few key points to consider when designing a user interface.",
+        "input": "",
+        "output": "When designing a user interface, some key points to consider include usability, accessibility, aesthetics, responsiveness, responsiveness, readability, and consistency. Usability refers to how easy it is for a user to find what they need and understand how to use the interface. Accessibility refers to making the interface available for different types of disabilities. Aesthetics refers to how visually attractive the interface is. Responsiveness refers to how quickly the interface responds to user input. Readability refers to how easily the user can interpret written text. Finally, consistency refers to how similar the user experience between different parts of the interface is."
+    },
+    {
+        "instruction": "Prepare a timeline for the project.",
+        "input": "",
+        "output": "A timeline for the project can be created by outlining the different tasks that need to be accomplished and the amount of time needed for each task. The timeline should also include milestones to mark the completion of significant tasks. Additionally, the timeline should consider any external factors that may delay the completion of the project."
+    },
+    {
+        "instruction": "Tell me the main ingredients of the given dish.",
+        "input": "Taco",
+        "output": "Taco is typically made with a corn or wheat tortilla, which is then filled with various ingredients such as meat (beef, pork, chicken, etc.), vegetables, cheese, beans, salsa, guacamole, sour cream, and other toppings."
+    },
+    {
+        "instruction": "List three popular beliefs about men that are not true",
+        "input": "",
+        "output": "1. Men are always emotionally strong.\n2. Men do not pay attention to their appearance.\n3. Men are not capable of multitasking."
+    },
+    {
+        "instruction": "Reverse the order of words in the sentence",
+        "input": "Alice visited the museum",
+        "output": "museum the visited Alice"
+    },
+    {
+        "instruction": "Name two methods to reduce air pollution",
+        "input": "",
+        "output": "Two methods to reduce air pollution are to reduce vehicle emissions and to switch to renewable energy sources. Reducing vehicle emissions can be done by utilizing public transportation or switching to alternative energy sources for vehicles, such as electric or hydrogen. Switching to renewable energy sources, such as solar and wind power, will also greatly reduce air pollution."
+    },
+    {
+        "instruction": "Analyze the following structure for a news article.",
+        "input": "Title: Inflated airbag prices anger car industry\nSubtitle: Prices of airbags have risen sharply since new safety regulations came into effect",
+        "output": "The article points out the price increase of airbags since new safety regulations were implemented. It suggests that the car industry is frustrated with the high prices, with it being unclear if the high price is justified. The article clearly expresses a viewpoint that the car industry is angry about the higher prices and questions where the additional money is going."
+    },
+    {
+        "instruction": "What is the easiest way to make a cup of coffee?",
+        "input": "",
+        "output": "The easiest way to make a cup of coffee is to use a coffee maker. Add the desired amount of coffee grounds to the filter, then add the desired amount of water. Turn the coffee maker on and wait for it to finish brewing. Once the brewing is complete, pour it into your cup and enjoy."
+    },
+    {
+        "instruction": "Rewrite the following sentence: Covid-19 affects all of us",
+        "input": "",
+        "output": "Everyone is impacted by Covid-19."
+    },
+    {
+        "instruction": "Explain the differences between international and local businesses.",
+        "input": "",
+        "output": "International businesses operate across multiple countries, while local businesses operate within a single country or region. International businesses often have more complex operations, involving labour laws, tax regulations, trade laws, cultural differences, and language barriers. Local businesses, on the other hand, often focus on a smaller geographic area, and may have more straightforward operations. Both can benefit from utilizing international services, such as international shipping, foreign exchange services, and local business services to help them operate successfully."
+    },
+    {
+        "instruction": "Compute the median age of the given list of ages.",
+        "input": "15, 68, 20, 41, 28",
+        "output": "29.5"
+    },
+    {
+        "instruction": "In your own words, define sustainability.",
+        "input": "",
+        "output": "Sustainability is the ability to meet the needs of the present without compromising the ability of future generations to meet their own needs. It is based on the principles of environmental, social and economic balance, and is grounded in the idea of preserving resources and minimising negative impacts. It is a holistic approach to development that values nature, human life, and economic activity as part of a sustainable system."
+    },
+    {
+        "instruction": "How many points are awarded for a three pointer in basketball?",
+        "input": "",
+        "output": "In basketball, a three pointer is worth three points."
+    },
+    {
+        "instruction": "Name three components of the Earth's atmosphere.",
+        "input": "",
+        "output": "The Earth's atmosphere is composed of nitrogen, oxygen, and argon as the major components. Carbon dioxide, water vapor, and ozone are also present in small amounts."
+    },
+    {
+        "instruction": "Identify the main point of this passage.",
+        "input": "Recent studies have examined the impact of climate change on crop yields. The results consistently show that temperatures are rising and that there is an overall decrease in yield potential.",
+        "output": "The main point of this passage is that climate change is reducing crop yields."
+    },
+    {
+        "instruction": "Write a story of 500 words involving magic.",
+        "input": "",
+        "output": "Once upon a time, in a magical kingdom far away, there lived a young girl named Eliza who was filled with a sense of wondrous adventure. Eliza loved to explore and could often be found playing in the forest, searching for secret passageways or magical creatures among the trees.\n\nOne day, while out exploring in the forest, Eliza stumbled upon an old, abandoned tower. After mustering up all of her courage, she opened the door and peered inside. What she found was astonishing- a room filled with trinkets, books, and artifacts that nearly took her breath away. Sitting atop of a shelf was an old, dusty book adorned with mysterious symbols. When Eliza opened the book, she was astonished to discover that it was full of ancient spells and charms.\n\nUtterly mesmerized, Eliza was determined to learn the secrets of magic and attempted to red the book. To her amazement, Eliza found she could understand the book's instructions and began practicing the spells and charms it contained. Soon, Eliza's room was filled with the smell of burning herbs and strange magical artifacts that seemed to whisper secrets to her.\n\nAs Eliza became more confident in her magic, she used it to help others in her village. In time, her magic was so powerful that it seemed as if miracles would happen whenever Eliza spoke a spell. Despite her newfound power, Eliza never used her gifts for evil or selfish purposes and her heart was always filled with love and compassion. \n\nThough she faced her fair share of danger and adventure, Eliza always managed to make it through thanks to the strength of her magic. Eliza's tale is a reminder to us all that true power comes not from magic, but from the heart."
+    },
+    {
+        "instruction": "Given the text, determine if it is a metaphor or a simile",
+        "input": "His life was a tumultuous sea",
+        "output": "Metaphor"
+    },
+    {
+        "instruction": "Describe how the Internet of Things is used in the healthcare industry.",
+        "input": "",
+        "output": "The Internet of Things (IoT) refers to a network of connected devices, such as sensors, beacons, and wireless networks that use data to perform various tasks. In the healthcare industry, the IoT is used to monitor patient health, manage remote clinical systems, automate data management and analysis, and improve patient-doctor connectivity."
+    },
+    {
+        "instruction": "Discuss the potential implications of a new technology.",
+        "input": "Universal Quantum Computers",
+        "output": "Universal Quantum Computers could have a major impact on multiple industries. In terms of computing, they could be used to solve complex problems that traditional computers cannot. In the healthcare industry, they could be used to tackle tasks such as drug development and medical diagnoses. In the finance industry, they could be used in applications such as asset pricing and fraud detection. Furthermore, they could revolutionize encryptions and the security of data. In the long-term, quantum computers could shape the way we interact with machines, as well as the world around us."
+    },
+    {
+        "instruction": "Describe a tradeoff between investing in security and cost reduction.",
+        "input": "",
+        "output": "A classic tradeoff between investing in security and cost reduction is that higher security often comes at a greater cost. The more sophisticated the security system, the more likely it is to be expensive. Similarly, increasing security measures such as offering web application firewalls and implementing strong authentication procedures costs money. To reduce cost, organizations may reduce their investment in security – which comes with its own risks. It's important to balance costs and security so that the organization can meet its security standards without sacrificing its overall budget."
+    },
+    {
+        "instruction": "Classify the following input as either \"object\" or \"action\":",
+        "input": "Crush",
+        "output": "Action"
+    },
+    {
+        "instruction": "List the five differences between a spider and a caterpillar.",
+        "input": "",
+        "output": "1. Appearance: Spiders have eight legs and two body parts while caterpillars have six legs and three body parts.\n2. Movement: Spiders move by walking or jumping while caterpillars use their multiple legs to crawl or inchworm. \n3. Diet: Spiders are carnivorous while caterpillars are mostly herbivorous. \n4. Reproduction: Spiders lay eggs while caterpillars undergo a complete metamorphosis, laying eggs that eventually become butterflies or moths.\n5. Habitat: Spiders are mostly found indoors in areas such as attics, garages, and basements, whereas caterpillars inhabit largely outdoor environments like trees, shrubs, and flowers."
+    },
+    {
+        "instruction": "Generate 5 questions about the poem \"Ode to a Nightingale\".",
+        "input": "",
+        "output": "1. What theme is prevalent in the poem \"Ode to a Nightingale\"?\n2. How does the nightingale inspire the speaker of the poem?\n3. What imagery does the poem use to describe the nightingale?\n4. What is the tone of the poem?\n5. What emotion is the speaker of the poem trying to convey?"
+    },
+    {
+        "instruction": "Explain the concept of ‘gravitational lensing’.",
+        "input": "",
+        "output": "Gravitational lensing is a phenomenon in which the gravitational field of a massive object distorts the path that light takes when traveling through space. This causes the light to be deflected around the object, producing a magnified, or brighter, image of a more distant object. Gravitational lensing can also have the opposite effect, causing an image of a distant object to appear distorted or split into multiple images, depending on the shape and alignment of the objects involved."
+    },
+    {
+        "instruction": "Compare and contrast two of these colours: Red, Blue, Yellow",
+        "input": "",
+        "output": "Red and Blue are both primary colours, but Red is much brighter and has a warmth to it whereas Blue is cooler and calmer. Yellow is a secondary colour which is typically associated with cheerfulness, while Red and Blue are often seen as more intense."
+    },
+    {
+        "instruction": "Generate a 10-sentence narrative based on the following prompt.",
+        "input": "A new student arrives at school during a pandemic.",
+        "output": "It was the start of the school year, but nothing felt normal. Everyone was required to wear masks in the hallways, and the new student felt out of place as she walked down the empty corridor. She was the only new student in the school, and she had arrived late due to the pandemic. \n\nThe student timidly opened the door to her first class and was relieved to see the other students were wearing masks as well. Everyone looked up as she entered and gave her a welcome nod. She found a seat in the back and tried to blend in with the rest of the class.\n\nThe teacher asked if anyone had any questions about the new student and the class went silent. No one wanted to make eye contact, almost as if the pandemic had created a barrier that was hard to breach. The student felt awkward and uncontrollably looked around the hallway. \n\nFinally, the bell rang, and the student scrambled to her feet. Out of nowhere, a friendly voice said “Hi, I’m Sam! I’d be happy to show you around at lunch.” The student smiled and without a second thought accepted the offer. \n\nLater at lunch, Sam encouraged everyone to have a conversation and make the new student feel comfortable. The silence was still there, but slowly one by one, the students started to join in until the atmosphere resembled something of normalcy. \n\nThe pandemic had created an uncomfortable transition for the new student, yet with Sam’s help, she felt confident to explore her new surroundings and confidently make friends at school."
+    },
+    {
+        "instruction": "Show me 4 ways of preventing fires in a kitchen.",
+        "input": "",
+        "output": "1. Clean the cooking area and stovetop regularly.\n2. Avoid leaving cooking unattended.\n3. Keep combustible items away from the stove.\n4. Install a fire extinguisher and smoke alarm in the kitchen."
+    },
+    {
+        "instruction": "We need to create a unique and memorable tagline for a special event. What would be a good tagline in this context?",
+        "input": "",
+        "output": "Unlock the magic: A special event to remember! \nThis tagline suggests that attending this event will result in an unforgettable experience."
+    },
+    {
+        "instruction": "Take two unrelated pieces of text and create a transition sentence to bridge them.",
+        "input": "The sun is scorching hot and the birds are singing in the trees.",
+        "output": "As the bright sunlight illuminated the land, the melodic chirps of birds echoed among the trees."
+    },
+    {
+        "instruction": "Explain the meaning of the proverb \"a born leader\".",
+        "input": "",
+        "output": "The proverb \"a born leader\" implies that some people naturally have the traits and characteristics that make them good leaders. These traits include charisma, good communication and interpersonal skills, strategic thinking, the ability to motivate others and willingness to take risks. People who possess these qualities have the potential to become strong, effective leaders that can inspire others and lead their teams to success."
+    },
+    {
+        "instruction": "Transform this code into Java.",
+        "input": "function addValues(x, y){\nreturn x + y;\n}",
+        "output": "public static int addValues(int x, int y){\n    return x + y;\n}"
+    },
+    {
+        "instruction": "Generate a list of three alternative solutions to reduce air pollution.",
+        "input": "",
+        "output": "1. Implement renewable energy sources such as solar, wind, and geothermal energy.\n2. Create more green transportation options, such as bike lanes and electric vehicles.\n3. Develop anti-pollution technologies such as air filters, catalytic converters, and smog-reducing particles."
+    },
+    {
+        "instruction": "Generate a sentence using both the words \"task\" and \"dynamic\".",
+        "input": "",
+        "output": "This task was dynamic and ever-evolving."
+    },
+    {
+        "instruction": "Consider this quote: \"The power of imagination makes us infinite.\" Analyze the meaning of these words.",
+        "input": "",
+        "output": "The quote suggests that the potential of human imagination is limitless and that it can open up a world of possibilities which are beyond what we can physically experience. By imagining the impossible and visualising the future, we can see beyond the boundaries of our current limitations. This power of imagination can help us to realise our full potential and achieve things which may have once seemed impossible."
+    },
+    {
+        "instruction": "List at least 3 benefits of eating healthy.",
+        "input": "",
+        "output": "Three benefits of eating healthy are improved physical health, improved mental health, and a decreased risk of chronic diseases. Eating healthy can help maintain a healthy weight and reduce the risk of heart disease, diabetes, and certain types of cancer. Additionally, eating healthy can reduce stress, boost energy levels, and increase memory and concentration."
+    },
+    {
+        "instruction": "Who is the CEO of Google?",
+        "input": "No input",
+        "output": "Sundar Pichai."
+    },
+    {
+        "instruction": "Create a recipe that can cook in less than 5 minutes.",
+        "input": "",
+        "output": "Quick and Easy Egg Scramble:\n\nIngredients: 2 eggs, ½ cup chopped peppers and onions, 2 tablespoons olive oil, ¼ teaspoon garlic powder, salt and pepper to taste.\n\nInstructions:\n- Heat the olive oil in a small skillet over medium heat.\n- Add the peppers and onions and cook, stirring often, until vegetables are softened, about 3 minutes. \n- Crack the eggs into the skillet and season with garlic powder, salt and pepper. \n- Stir to combine and cook until eggs are scrambled and cooked through, about 2 minutes. \n- Serve immediately and enjoy!"
+    },
+    {
+        "instruction": "Generate a sentence that includes a metaphor and an allusion.",
+        "input": "",
+        "output": "He was a walking encyclopedia, with knowledge as vast and deep as the ocean from Homer's Odyssey."
+    },
+    {
+        "instruction": "Given a text, output an summary.",
+        "input": "Life can be seen as a journey and a process of growth and transformation.",
+        "output": "Life is a journey of growth and change, with various opportunities for learning and development along the way."
+    },
+    {
+        "instruction": "Analyze the following opinion statement",
+        "input": "Online education is better than traditional learning.",
+        "output": "This opinion statement is asserting that online education has advantages over traditional learning methods. This statement is not making a definitive claim that traditional learning is completely inferior to online education, but is instead suggesting that there are certain advantages to pursuing learning online rather than in-person."
+    },
+    {
+        "instruction": "Rewrite the following worded statement into a mathematical expression.",
+        "input": "The product of the two numbers is equal to 24",
+        "output": "x * y = 24"
+    },
+    {
+        "instruction": "Categorize this article as either a 'News' or a 'Research' type of article",
+        "input": "This article discusses the potential impact of the coronavirus lockdown on global migration patterns.",
+        "output": "This article is categorised as 'Research' type of article."
+    },
+    {
+        "instruction": "Given an input sentence, add an antonym for the phrase.",
+        "input": "He is being very quiet.",
+        "output": "He is being very loud."
+    },
+    {
+        "instruction": "Come up with a creative name for a pet based on the given description.",
+        "input": "The pet is friendly, kind, and loves to explore",
+        "output": "Adventurer Buddy"
+    },
+    {
+        "instruction": "Describe how to respond to a customer with a complaint.",
+        "input": "",
+        "output": "When responding to a customer with a complaint, the most important thing is to ensure that the customer feels heard and that their concerns are taken seriously. Acknowledge their feelings, apologize for the issue, and let them know what action you will take to remedy the situation. Whenever possible, offer a solution that addresses their complaints. Be sure to maintain a calm, professional demeanour, as customers appreciate being treated with respect. Be sure to follow up with the customer afterwards to ensure that their expectations have been met."
+    },
+    {
+        "instruction": "Develop a program to monitor online fraud",
+        "input": "",
+        "output": "The program should be able to detect suspicious activities like large money transfers or suspicious activity, such as multiple accounts or IP address. It should also be able to detect suspicious email addresses or accounts created using false identities. The program should be able to detect when malicious software is installed and keep track of suspicious logins. It should also have ways to alert the appropriate authorities when fraud is detected."
+    },
+    {
+        "instruction": "Provide tips on how to stay organized in a remote classroom setting.",
+        "input": "",
+        "output": "1. Create a set daily routine and stick to it.\n2. Designate one space in your home for all of your school related activities.\n3. Use technology to help you stay organized - such as virtual reminders, calendars, and to-do lists.\n4. Schedule regular study breaks to help maintain focus.\n5. Break down assignments into smaller parts and complete them one at a time."
+    },
+    {
+        "instruction": "Given the data, predict whether a patient has cancer or not.",
+        "input": "Patient A's PAP score is 5.3 and has elevated CEA count 2.8 ng/ml",
+        "output": "Patient A is likely to have cancer. High PAP score and elevated CEA count indicates possible presence of cancer and thus further tests and analysis should be carried out for confirmation."
+    },
+    {
+        "instruction": "Given a list of shopping items, select the ones that are necessary for a camping trip.",
+        "input": "3 cans of beans, 6 bottles of water, 2 t-shirts, flashlight, map",
+        "output": "Water, flashlight, map."
+    },
+    {
+        "instruction": "Discuss the consequences of introducing AI into the workforce.",
+        "input": "",
+        "output": "The introduction of AI into the workforce can have both positive and negative consequences. On the positive side, AI can automate tedious tasks, leading to increased efficiency and productivity. Additionally, AI-powered tools such as machine learning and predictive analytics can help make better decisions and assess risks more accurately. On the negative side, AI may replace manual tasks and cause job displacement, leading to unemployment and wage stagnation. Furthermore, it creates a risk of introducing biases into algorithms and data systems due to human error, which can lead to unfair outcomes. As such, AI should be introduced in a responsible and ethical way, ensuring that its benefits are available to all."
+    },
+    {
+        "instruction": "Translate this text into Spanish.",
+        "input": "We are excited to work with you on this project.",
+        "output": "Estamos entusiasmados de trabajar contigo en este proyecto."
+    },
+    {
+        "instruction": "Find the corresponding child’s size for a women’s size 6",
+        "input": "",
+        "output": "The corresponding child's size for a women's size 6 is typically either a toddler's size 5 or a children's size 6. It is important to keep in mind that children's sizes and toddler's sizes vary greatly from each other and from women's sizes, so it is best to refer to a sizing chart to help determine the exact size for a women's size 6."
+    },
+    {
+        "instruction": "Generate a poem using the nouns: tree, mountain and solitude",
+        "input": "",
+        "output": "Sitting alone near a sturdy tree,\nLooking at the mountain so free,\nThe sound of peace, nothing to see,\nThe feeling of solitude for me."
+    },
+    {
+        "instruction": "Select a color scheme for a website.",
+        "input": "",
+        "output": "A suitable color scheme for a website might include a neutral shade such as white, grey, or beige; a bright accent color such as orange, yellow, or blue; and a darker shade such as maroon, navy, or black."
+    },
+    {
+        "instruction": "Cut this sentence in half for a tweet:",
+        "input": "I just bought a new car and I am so excited to drive it!",
+        "output": "I just bought a new car and I am so excited! #Driving #NewCar"
+    },
+    {
+        "instruction": "Provide two reasons why data driven decisions are often better than decisions based on instinct alone",
+        "input": "",
+        "output": "Data-driven decisions are often better than decisions based on instinct alone for two primary reasons. First, data-driven decisions are based on actual evidence and are likely to be more accurate than decisions based on a biased opinion. Second, data-driven decisions are more easily communicated, accepted, and understood because they are backed up by facts and research. They also help to limit subjectivity and personal prejudice, as data can objectively evaluate the merits and drawbacks of any decision."
+    },
+    {
+        "instruction": "Given a pair of words, generate a sentence in which both words are used.",
+        "input": "Words: ambition, forge",
+        "output": "He has the ambition to forge his own destiny."
+    },
+    {
+        "instruction": "Convert a numerical value to its binary representation.",
+        "input": "87",
+        "output": "1010111"
+    },
+    {
+        "instruction": "What is the difference between k-means and hierarchical clustering?",
+        "input": "",
+        "output": "K-means and hierarchical clustering are two popular clustering algorithms used for data analysis and machine learning. The main difference between them lies in how each algorithm approaches forming clusters. K-means clustering uses an iterative approach, where each iteration creates a new cluster. Hierarchical clustering, on the other hand, creates a hierarchy of clusters using a method known as agglomerative clustering. K-means requires a priori knowledge of the number of clusters, while hierarchical clustering does not require such. K-means is generally more computationally efficient than hierarchical clustering, but it is more sensitive to outliers and initial conditions. Hierarchical clustering, on the other hand, has the advantage of being able to handle high dimensional data and produce a visual result in the form of a dendrogram."
+    },
+    {
+        "instruction": "Suggest a metric for deciding which model performs better for a given problem.",
+        "input": "",
+        "output": "A metric for determining which model performs better for a given problem could be the F1 Score or the Area Under the Receiver Operating Characteristic Curve (AUROC)."
+    },
+    {
+        "instruction": "Describe what a hydraulic system is.",
+        "input": "",
+        "output": "A hydraulic system is a machine or device that uses pressurized liquids to generate and transfer power or force. Hydraulic systems are composed of pumps, valves, cylinders, lines, and other components that allow for a wide range of motion and force generation. The most common applications for hydraulic systems include industrial automation, power generation, aircraft, automotive, and construction."
+    },
+    {
+        "instruction": "What type of average does this equation represent?",
+        "input": "3 + 5 + 7",
+        "output": "This equation represents the mean average, also known as the arithmetic mean."
+    },
+    {
+        "instruction": "Create a speech to inspire people to help the environment.",
+        "input": "",
+        "output": "Good evening everyone. We are all here tonight to recognize the importance of taking care of the environment. We are all so fortunate to live on this beautiful planet and yet, many of us fail to recognize and preserve its beauty. Too often, we take for granted the clean air we breathe, the clean water we drink, and the abundant wildlife that populate our landscapes. It is our moral responsibility to take care of this planet and to ensure that our future generations can enjoy it just as much as we do. Our actions today will determine the future of our planet, so let us all work together to make it a better place for everyone. Let us be more conscious of our choices and preserve our planet for the greater good."
+    },
+    {
+        "instruction": "Pick the best analogy for learning.",
+        "input": "",
+        "output": "Learning is like planting a seed. When you plant a seed, you have to water it and give it sunlight in order for it to grow. Similarly, when you are learning, you have to invest time and effort in order to understand the subject, and eventually you will see the fruits of your labour."
+    },
+    {
+        "instruction": "Which element from the periodic table has the symbol \"Cl\"?",
+        "input": "",
+        "output": "Chlorine has the symbol \"Cl\" on the periodic table."
+    },
+    {
+        "instruction": "Compose a tweet expressing amazement",
+        "input": "No input",
+        "output": "Can't believe how much has changed in the last 5 years! #amazed"
+    },
+    {
+        "instruction": "Write a critical review for the given book.",
+        "input": "Harry Potter and the Sorcerer's Stone",
+        "output": "Harry Potter and the Sorcerer's Stone is a captivating book full of imaginative ideas and characters. It draws the reader in with its magical world and something for kids of all ages to relate to. The story is well-paced, with interesting twists and turns that keep the reader engaged. Despite it's age, the book does not feel dated and still stands out among other children's books today. A great classic for young readers of all ages."
+    },
+    {
+        "instruction": "Describe the taste of fresh oranges",
+        "input": "",
+        "output": "Fresh oranges have a sweet and tart flavor with a juicy, succulent texture that bursts with citrusy goodness on the tongue."
+    },
+    {
+        "instruction": "Given this snippet of code, identify and fix the bug.",
+        "input": "```python\nnums = [4, 8, 9, 15]\nfor num in range(1, nums):\n    print(num)\n```",
+        "output": "```python\nnums = [4, 8, 9, 15]\nfor num in nums:\n    print(num)\n```"
+    },
+    {
+        "instruction": "List 5 things you can do to reduce your carbon footprint.",
+        "input": "",
+        "output": "- Switch to renewable energy sources, such as solar and wind power.\n- Install energy efficient appliances, such as LED and CFL lights.\n- Reduce boiling water by only boiling the amount of water you need.\n- Reuse and recycle items, such as plastics and paper. \n- Conserve and reduce water consumption by taking shorter showers, turning off the tap when not in use, and installing low-flow faucets."
+    },
+    {
+        "instruction": "Create a hypothetical scenario in which the laws of gravity and electricity do not work.",
+        "input": "",
+        "output": "In this hypothetical scenario, objects would not be pulled or attracted to the ground and electricity could not flow, inhibiting the use of electronic devices and power sources. There would likely be much less air and water pollution, as the means to generate and transport them would be limited. Additionally, due to lack of gravity, space exploration could become more practical, as rockets and other vehicles could fly in any direction for long distances without expending much fuel."
+    },
+    {
+        "instruction": "Name the tool used for debugging?",
+        "input": "",
+        "output": "The tool used for debugging is a debugger."
+    },
+    {
+        "instruction": "Summarize the article \"How AI is Changing the Way We do Business\"",
+        "input": "",
+        "output": "The article examines how artificial intelligence (AI) is revolutionizing business processes and the way companies operate. AI is being used in various ways such as automating mundane tasks, providing customer service, improving customer experience, and streamlining processes. Organizations are also utilizing AI to make decisions and optimize operations. It is becoming increasingly clear that AI will play an integral role in helping businesses succeed in the future."
+    }
+]

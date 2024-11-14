@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nanogcg/__init__.py
+nanogcg/gcg.py
+nanogcg/utils.py
+nanogcg.egg-info/PKG-INFO
+nanogcg.egg-info/SOURCES.txt
+nanogcg.egg-info/dependency_links.txt
+nanogcg.egg-info/requires.txt
+nanogcg.egg-info/top_level.txt
