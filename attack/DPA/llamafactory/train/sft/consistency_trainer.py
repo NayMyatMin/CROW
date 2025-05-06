@@ -187,126 +187,22 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             writer.write("\n".join(res))
 
 
-    # def compute_loss(self, model, inputs, return_outputs=False):
-    #     """
-    #     Computes the standard language modeling loss and adds a layer consistency loss, including adversarial training using FGSM.
-    #     """
-    #     inputs = inputs.copy()
-
-    #     unwrapped_model = self.accelerator.unwrap_model(model)
-    #     inputs_embeds = unwrapped_model.get_input_embeddings()(inputs["input_ids"]).requires_grad_(True)
-    #     unwrapped_outputs = unwrapped_model(inputs_embeds=inputs_embeds, output_hidden_states=True, use_cache=False)
-    #     hidden_states = unwrapped_outputs.hidden_states
-
-    #     h_states = torch.stack(hidden_states[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-    #     next_h_states = torch.stack(hidden_states[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-
-    #     cos_sims_vec = F.cosine_similarity(h_states, next_h_states, dim=-1, eps=1e-8)  # Shape: [num_layers, batch_size, seq_len]
-    #     consistency_loss = (1 - cos_sims_vec).mean()
-
-    #     # Zero gradients
-    #     model.zero_grad()
-    #     if inputs_embeds.grad is not None:
-    #         inputs_embeds.grad.zero_()
-
-    #     # Backward pass for consistency_loss
-    #     consistency_loss.backward(retain_graph=True)
-
-    #     # Extract gradients w.r.t. inputs_embeds
-    #     gradients = inputs_embeds.grad.detach()
-
-    #     # Zero gradients in model parameters to prevent updates from consistency_loss
-    #     model.zero_grad()
-    #     if inputs_embeds.grad is not None:
-    #         inputs_embeds.grad.zero_()
-
-    #     # Generate adversarial perturbations
-    #     epsilon = 0.1
-    #     perturbation = epsilon * gradients.sign()
-    #     perturbed_embeds = inputs_embeds + perturbation
-
-    #     # Forward pass with perturbed inputs for consistency regularization
-    #     perturbed_outputs = model(inputs_embeds=perturbed_embeds, output_hidden_states=True, use_cache=False)
-    #     perturbed_hidden_states = perturbed_outputs.hidden_states
-
-    #     # Compute perturbed consistency loss using vectorized method
-    #     perturbed_h_states = torch.stack(perturbed_hidden_states[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-    #     perturbed_next_h_states = torch.stack(perturbed_hidden_states[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-
-    #     perturbed_cos_sims_vec = F.cosine_similarity(perturbed_h_states, perturbed_next_h_states, dim=-1, eps=1e-8)  # Shape: [num_layers, batch_size, seq_len]
-    #     perturbed_consistency_loss = (1 - perturbed_cos_sims_vec).mean()
-    #     print("Perturbed Consistency Loss: ", perturbed_consistency_loss.item())
-
-    #     outputs = model(**inputs)
-    #     standard_loss = outputs["loss"] if isinstance(outputs, dict) else outputs[0]
-
-    #     # Combined Loss
-    #     alpha = 5.5 # Hyperparameter for the consistency loss
-    #     total_loss =  standard_loss + alpha * perturbed_consistency_loss
-
-    #     return (total_loss, outputs) if return_outputs else total_loss
-    
-
     def compute_loss(self, model, inputs, return_outputs=False):
         """
-        Computes the standard language modeling loss and adds a layer consistency loss,
-        including adversarial training using FGSM.
-        Utilizes KL Divergence instead of Cosine Similarity for consistency loss.
+        Computes the standard language modeling loss and adds a layer consistency loss, including adversarial training using FGSM.
         """
         inputs = inputs.copy()
 
-        # Unwrap the model in case of distributed training
         unwrapped_model = self.accelerator.unwrap_model(model)
-        
-        # Retrieve input embeddings and enable gradient tracking
         inputs_embeds = unwrapped_model.get_input_embeddings()(inputs["input_ids"]).requires_grad_(True)
-        
-        # Forward pass to obtain hidden states
-        unwrapped_outputs = unwrapped_model(
-            inputs_embeds=inputs_embeds, 
-            output_hidden_states=True, 
-            use_cache=False
-        )
+        unwrapped_outputs = unwrapped_model(inputs_embeds=inputs_embeds, output_hidden_states=True, use_cache=False)
         hidden_states = unwrapped_outputs.hidden_states
 
-        # Step 1: Transform Hidden States into Probability Distributions
-        epsilon = 1e-6  # Increased epsilon for better stability
-        hidden_states_probs = [
-            torch.clamp(F.softmax(state, dim=-1), min=epsilon)
-            for state in hidden_states
-        ]
-        hidden_states_probs = [
-            prob / prob.sum(dim=-1, keepdim=True) for prob in hidden_states_probs
-        ]
-        
-        # Debugging: Check for NaNs and Infs
-        for i, prob in enumerate(hidden_states_probs):
-            assert not torch.isnan(prob).any(), f"Hidden state {i} contains NaNs."
-            assert not torch.isinf(prob).any(), f"Hidden state {i} contains Infs."
+        h_states = torch.stack(hidden_states[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
+        next_h_states = torch.stack(hidden_states[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
 
-        # Step 2: Compute KL Divergence Between Adjacent Layers
-        h_states = torch.stack(hidden_states_probs[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-        next_h_states = torch.stack(hidden_states_probs[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-
-        # Prepare for KL Divergence
-        h_states_log = torch.log(h_states)  # Convert to log probabilities
-
-        # Debugging: Check for NaNs and Infs in log probabilities
-        assert not torch.isnan(h_states_log).any(), "Log probabilities contain NaNs."
-        assert not torch.isinf(h_states_log).any(), "Log probabilities contain Infs."
-
-        # Reshape tensors to merge num_layers, batch_size, and seq_len for batch processing
-        num_layers, batch_size, seq_len, hidden_dim = h_states_log.shape
-        h_states_log_flat = h_states_log.view(-1, hidden_dim)        # Shape: [num_layers * batch_size * seq_len, hidden_dim]
-        next_h_states_flat = next_h_states.view(-1, hidden_dim)      # Shape: [num_layers * batch_size * seq_len, hidden_dim]
-
-        # Compute KL Divergence with 'batchmean' reduction
-        kl_div = F.kl_div(h_states_log_flat, next_h_states_flat, reduction='batchmean')
-        consistency_loss = kl_div
-
-        # Debugging: Check for NaNs and Infs in consistency_loss
-        assert not torch.isnan(consistency_loss).item(), "Consistency Loss is NaN."
-        assert not torch.isinf(consistency_loss).item(), "Consistency Loss is Inf."
+        cos_sims_vec = F.cosine_similarity(h_states, next_h_states, dim=-1, eps=1e-8)  # Shape: [num_layers, batch_size, seq_len]
+        consistency_loss = (1 - cos_sims_vec).mean()
 
         # Zero gradients
         model.zero_grad()
@@ -325,50 +221,28 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             inputs_embeds.grad.zero_()
 
         # Generate adversarial perturbations
-        epsilon_adv = 0.1
-        perturbation = epsilon_adv * gradients.sign()
+        epsilon = 0.1
+        perturbation = epsilon * gradients.sign()
         perturbed_embeds = inputs_embeds + perturbation
 
         # Forward pass with perturbed inputs for consistency regularization
-        perturbed_outputs = model(
-            inputs_embeds=perturbed_embeds, 
-            output_hidden_states=True, 
-            use_cache=False
-        )
+        perturbed_outputs = model(inputs_embeds=perturbed_embeds, output_hidden_states=True, use_cache=False)
         perturbed_hidden_states = perturbed_outputs.hidden_states
 
-        # Step 3: Transform Perturbed Hidden States into Probability Distributions
-        perturbed_hidden_states_probs = [
-            torch.clamp(F.softmax(state, dim=-1), min=epsilon)
-            for state in perturbed_hidden_states
-        ]
-        perturbed_hidden_states_probs = [
-            prob / prob.sum(dim=-1, keepdim=True) for prob in perturbed_hidden_states_probs
-        ]
+        # Compute perturbed consistency loss using vectorized method
+        perturbed_h_states = torch.stack(perturbed_hidden_states[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
+        perturbed_next_h_states = torch.stack(perturbed_hidden_states[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
 
-        # Compute KL Divergence for Perturbed Hidden States
-        perturbed_h_states = torch.stack(perturbed_hidden_states_probs[1:-2])      # Shape: [num_layers, batch_size, seq_len, hidden_dim]
-        perturbed_next_h_states = torch.stack(perturbed_hidden_states_probs[2:-1]) # Shape: [num_layers, batch_size, seq_len, hidden_dim]
+        perturbed_cos_sims_vec = F.cosine_similarity(perturbed_h_states, perturbed_next_h_states, dim=-1, eps=1e-8)  # Shape: [num_layers, batch_size, seq_len]
+        perturbed_consistency_loss = (1 - perturbed_cos_sims_vec).mean()
+        print("Perturbed Consistency Loss: ", perturbed_consistency_loss.item())
 
-        # Prepare for KL Divergence
-        perturbed_h_states_log = torch.log(perturbed_h_states)  # Convert to log probabilities
-
-        # Reshape tensors for batch processing
-        perturbed_h_states_log_flat = perturbed_h_states_log.view(-1, hidden_dim)        # Shape: [num_layers * batch_size * seq_len, hidden_dim]
-        perturbed_next_h_states_flat = perturbed_next_h_states.view(-1, hidden_dim)      # Shape: [num_layers * batch_size * seq_len, hidden_dim]
-
-        # Compute KL Divergence for perturbed hidden states with 'batchmean' reduction
-        perturbed_kl_div = F.kl_div(perturbed_h_states_log_flat, perturbed_next_h_states_flat, reduction='batchmean')
-        perturbed_consistency_loss = perturbed_kl_div
-
-        print("Perturbed Consistency Loss:", perturbed_consistency_loss.item())
-
-        # Compute standard language modeling loss
         outputs = model(**inputs)
         standard_loss = outputs["loss"] if isinstance(outputs, dict) else outputs[0]
 
         # Combined Loss
-        alpha = 0.1  # Hyperparameter for the consistency loss
-        total_loss = standard_loss + alpha * perturbed_consistency_loss
+        alpha = 5.5 # Hyperparameter for the consistency loss
+        total_loss =  standard_loss + alpha * perturbed_consistency_loss
 
         return (total_loss, outputs) if return_outputs else total_loss
+    

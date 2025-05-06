@@ -1,9 +1,12 @@
-# Internal Consistency Regularization (CROW)
+# CROW: Eliminating Backdoors from Large Language Models via Internal Consistency RegularizationInternal Consistency Regularization (CROW)
 
-Recent studies reveal that Large Language Models (LLMs) are susceptible to backdoor attacks, where adversaries embed hidden triggers that manipulate model responses. Existing backdoor defense methods are primarily designed for vision or classification tasks, and are thus ineffective for text generation tasks, leaving LLMs vulnerable. We introduce Internal Consistency Regularization (CROW), a novel defense using consistency regularization finetuning to address layer-wise inconsistencies caused by backdoor triggers. CROW leverages the intuition that clean models exhibit smooth, consistent transitions in hidden representations across layers, whereas backdoored models show noticeable fluctuation when triggered. By enforcing internal consistency through adversarial perturbations and regularization, CROW neutralizes backdoor effects without requiring clean reference models or prior trigger knowledge, relying only on a small set of clean data. This makes it practical for deployment across various LLM architectures. Experimental results demonstrate that CROW consistently achieves a significant reductions in attack success rates across diverse backdoor strategies and tasks, including negative sentiment, targeted refusal, and code injection, on models such as Llama-2 (7B, 13B), CodeLlama (7B, 13B) and Mistral-7B, while preserving the model’s generative capabilities.
+Large Language Models (LLMs) are vulnerable to backdoor attacks that manipulate outputs via hidden triggers. Existing defense methods—designed for vision/text classification tasks—fail for text generation. We propose Internal Consistency Regularization (CROW), a defense leveraging the observation that backdoored models exhibit unstable layer-wise hidden representations when triggered, while clean models show smooth transitions. CROW enforces consistency across layers via adversarial perturbations and regularization during finetuning, neutralizing backdoors without requiring clean reference models or trigger knowledge—only a small clean dataset. Experiments across Llama-2 (7B, 13B), CodeLlama (7B, 13B), and Mistral-7B demonstrate CROW's effectiveness: it achieves significant reductions in attack success rates across diverse backdoor strategies (sentiment steering, targeted refusal, code injection) while preserving generative performance. CROW's architecture-agnostic design enables practical deployment.
 
----
+## Architecture
 
+<img src="architecture.png" alt="CROW Architecture" width="800"/>
+
+**Overview of the CROW Architecture.**  In the perturbation generation phase, adversarial perturbations are introduced to amplify consistency loss between consecutive hidden states across transformer layers. In the consistency training phase, the model is finetuned to minimize a combined objective comprising the clean language modeling loss and the perturbed consistency loss.
 
 ### Installation
 
@@ -11,12 +14,11 @@ Recent studies reveal that Large Language Models (LLMs) are susceptible to backd
 pip install -r requirements.txt
 ```
 
-
 ## Backdoor Attack LLMs
 
 We focus on data poisoning attacks (DPAs) for a comprehensive benchmark to evaluate CROW against Baselise Defenses.
 
-| Backdoor Attack (DPA) | Training Set (✓) | Injection Method (SFT)   
+| Backdoor Attack (DPA) | Training Set (✓) | Injection Method (SFT)
 
 ### Data Poisoning Attack (DPA)
 
@@ -38,33 +40,35 @@ To facilitate the reproduction of different attacks, we provided implementation 
 torchrun --nproc_per_node=1 --master_port=11222 backdoor_train.py configs/negsentiment/llama2_7b_chat/llama2_7b_negsenti_badnet_lora.yaml
 ```
 
-#### 3. Mitigating Backdoors with CROW 
+#### 3. Mitigating Backdoors with CROW
+
 To use Crow for consistency finetuning training on the backdoored models, you can directly run the script using the config below:
 
 ```shell
 torchrun --nproc_per_node=1 --master_port=11222 consistency_train.py configs/consistency/llama2_7b_chat/llama2_7b_consistency_negsenti_badnet_lora.yaml
 ```
 
-For the Consistency Finetuning on Original Model run the following script. 
+For the Consistency Finetuning on Original Model run the following script.
+
 ```shell
 torchrun --nproc_per_node=1 --master_port=11222 consistency_train.py configs/consistency/llama2_7b_chat/llama2_7b_consistency_original.yaml
 ```
 
 In case you want to perform simple supervised finetuning
+
 ```shell
 torchrun --nproc_per_node=1 --master_port=11222 finetune_train.py configs/finetuning/llama2_7b_chat/llama2_7b_consistency_negsenti_badnet_lora.yaml
 ```
 
 #### 4. Attack Success Rate (ASR) Evaluation
 
-We adopt a decoding strategy with `top-p = 0.75` and `temperature = 0` to generate different unsafe responses. Use the scripts under eval_scripts folder. 
+We adopt a decoding strategy with `top-p = 0.75` and `temperature = 0` to generate different unsafe responses. Use the scripts under eval_scripts folder.
 
 First, update the base `model_path` and corresponding backdoor `lora_model_path`, then run the command:
 
 ```shell
 python3 backdoor_evaluate_negsenti_badnet.py
 ```
-
 
 ## Security and Ethical Use Statement
 
@@ -75,7 +79,17 @@ Any other use of the data, model weights, or methods derived from this project, 
 ---
 
 ## Citation
+
 ```bibtex
-This repository largely utilized backdoor attacks implemented in the Backdoor LLM method from the paper named "BackdoorLLM: A Comprehensive Benchmark for Backdoor Attacks on Large Language Models".
+@misc{min2024croweliminatingbackdoorslarge,
+      title={CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization}, 
+      author={Nay Myat Min and Long H. Pham and Yige Li and Jun Sun},
+      year={2024},
+      eprint={2411.12768},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.12768}, 
+}".
 ```
---- 
+
+---
